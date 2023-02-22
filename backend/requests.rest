@@ -1,0 +1,53 @@
+post http://localhost:3001/api/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo3MSwibmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzY5NTAxNTcsImV4cCI6MTY3Njk1Mzc1N30.ksU6RzQ8l-o04_vOUiZhE6YGbtZIkw7U7iFyRVVLmdg
+
+{
+    "name":"john",
+    "email":"john12@gmail.com",
+    "password":"john14",
+    "user_type":"admin3",
+    "status":"active"
+}
+ 
+###
+# get all
+get http://localhost:3001/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo3MSwibmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzY5NTAxNTcsImV4cCI6MTY3Njk1Mzc1N30.ksU6RzQ8l-o04_vOUiZhE6YGbtZIkw7U7iFyRVVLmdg
+
+###
+delete http://localhost:3001/api/users/74
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo3MSwibmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzY5NTAxNTcsImV4cCI6MTY3Njk1Mzc1N30.ksU6RzQ8l-o04_vOUiZhE6YGbtZIkw7U7iFyRVVLmdg
+
+###
+put http://localhost:3001/api/users/76
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo3MSwibmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzY5NTAxNTcsImV4cCI6MTY3Njk1Mzc1N30.ksU6RzQ8l-o04_vOUiZhE6YGbtZIkw7U7iFyRVVLmdg
+
+{
+    "name":"john3",
+    "email":"john33@gmail.com",
+    "password":"john3",
+    "user_type":"john3",
+    "status":"active"
+}
+
+# AUTHENTICATION AREA---------------------------------------------------------------
+###
+# get token
+post http://localhost:3001/api/auth/login
+Content-Type: application/json
+
+{
+    "email":"john33@gmail.com",
+    "password":"john3"
+}
+
+###
+# get refresh_token
+get http://localhost:3000/api/auth/refresh_token
+
+###
+# delete refresh_token
+delete http://localhost:3000/api/auth/refresh_token
+
